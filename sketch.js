@@ -27,11 +27,11 @@ function draw() {
 
 	Engine.update(engine); 
 
-	paper.display();
+	background(0);
 
 	rectMode(CENTER);
-	background(0);
-  
+	paper.display();	
+	 
 	drawSprites();
  
 }
