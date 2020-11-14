@@ -4,14 +4,14 @@ class Paper{
 
         var options = {
 
-            isStatic:true,
+            isStatic:false,
             restitution:0.3,
             friction:0.5,
             density:1.2
-
+            
         }
 
-        this.body = Bodies.circle(20,20,20,options);
+        this.body = Bodies.circle(700,600,20,options);
         World.add(world,this.body);
 
     }
@@ -24,9 +24,9 @@ class Paper{
 
         fill(0,255,0);
         stroke("white"); 
-        strokeWeight(3);
+        strokeWeight(1);
 
-        ellipse(30, 30, 30, 30);
+        ellipse(30, 645, 30, 30);
 
         pop();
 
