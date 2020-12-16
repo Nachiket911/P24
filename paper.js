@@ -1,6 +1,6 @@
 class Paper{
 
-    constructor(){
+    constructor(x,y,r){
 
         var options = {
 
@@ -11,14 +11,19 @@ class Paper{
             
         }
 
-        this.body = Bodies.circle(700,600,20,options);
+        x = this.body.x;
+        y = this.body.y;
+        r = this.body.r;
+
+        this.body = Bodies.circle(x, y, r ,options);
         World.add(world,this.body);
 
-    }
+    }  
 
     display(){
 
         push(); 
+        translate(this.x, this.y)
 
         ellipseMode(CENTER);
 
@@ -32,4 +37,4 @@ class Paper{
 
       }
 
-}
+} 
