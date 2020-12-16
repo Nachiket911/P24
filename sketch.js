@@ -18,7 +18,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	paper = new Paper();
+	paper = new Paper(30, 645, 60);
 	trashBin = new Dustbin();
 	gameSpace = new Ground();
 
@@ -38,15 +38,17 @@ function draw() {
 	trashBin.appear();
 	gameSpace.display();
 
+	keyPressed();
+
 	drawSprites();
  
 }
 
 function keyPressed(){
 
-  if(keyCode === UP_ARROW){
+  if (keyCode === 32){
 
-    Body.applyForce(paper.body, paper.body.position, {x:85, y:85});  
+    Body.applyForce(paper.body, paper.body.position, {x:130, y:140});  
 		
 	}
 
