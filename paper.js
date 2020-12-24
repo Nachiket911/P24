@@ -10,13 +10,13 @@ class Paper{
             density:1.2
             
         }
+    
+        this.body = Bodies.circle(x, y, r ,options);
+        World.add(world,this.body);
 
         x = this.body.x;
         y = this.body.y;
         r = this.body.r;
-
-        this.body = Bodies.circle(x, y, r ,options);
-        World.add(world,this.body);
 
     }  
 
@@ -31,7 +31,7 @@ class Paper{
         stroke("white"); 
         strokeWeight(1);
 
-        ellipse(30, 645, 30, 30);
+        ellipse(40, 645, 30, 30);
 
         pop();
 
